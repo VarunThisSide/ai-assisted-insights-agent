@@ -1,0 +1,36 @@
+[project]
+name = "ai-insights-agent"
+version = "0.1.0"
+description = "MCP agent that translates natural language questions into accurate, explainable, and reproducible data insights"
+authors = [
+    {name = "Varun"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.1.2",
+    "pyyaml>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/VarunThisSide/ai-assisted-insights-agent"
+Repository = "https://github.com/VarunThisSide/ai-assisted-insights-agent"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["insights_agent"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["05_tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
