@@ -5,7 +5,6 @@ AI-Assisted Insights Agent - MCP Server
 An MCP agent that translates natural language questions into accurate, explainable,
 and reproducible data insights.
 
-Created by: Jen Kelleman
 """
 
 import sys
